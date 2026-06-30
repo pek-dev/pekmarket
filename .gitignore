@@ -1,0 +1,22 @@
+# Fichiers sensibles à exclure
+config/database.php
+.env
+.env.local
+*.log
+uploads/
+vendor/
+node_modules/
+.DS_Store
+pekdevmarket.zip
+pekdev-market/
+diagnostic.php
+fix-*.php
+setup.php
+install.php
+install-demo.php
+generate-hash.php
+move-files.php
+setup-folders.php
+test-css.php
+check-url.php
+tt.txt
