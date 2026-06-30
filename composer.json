@@ -1,0 +1,14 @@
+{
+    "name": "pekdev/pekdevmarket",
+    "autoload": {
+        "psr-4": {
+            "Pekdev\\Pekdevmarket\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yes"
+        }
+    ],
+    "require": {}
+}

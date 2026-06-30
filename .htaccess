@@ -1,0 +1,28 @@
+# .htaccess - Version simplifiée et compatible XAMPP
+Options -Indexes
+AddDefaultCharset UTF-8
+
+# Désactiver mod_rewrite temporairement si problème
+# RewriteEngine Off
+
+# Protection des dossiers sensibles
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /pekdev-market/
+    
+    # Bloquer l'accès aux dossiers sensibles
+    RewriteRule ^config/ - [F,L]
+    RewriteRule ^includes/ - [F,L]
+    RewriteRule ^uploads/.*\.php$ - [F,L]
+</IfModule>
+
+# Protection des fichiers sensibles
+<FilesMatch "\.(sql|md|log|env)$">
+    Require all denied
+</FilesMatch>
+
+# Headers de sécurité
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
